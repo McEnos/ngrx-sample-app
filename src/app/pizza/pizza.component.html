@@ -1,0 +1,15 @@
+<img [src]="img$ | async" />
+
+<ng-container *ngrxLet="hasPepperoni$ as hasPepperoni">
+  <button (click)="pepperoniClick(hasPepperoni)">
+    {{ hasPepperoni ? "Remove" : "Add" }} Pepperoni
+  </button>
+</ng-container>
+
+<ng-container *ngrxLet="hasSausage$ as hasSausage">
+  <button (click)="sausageClick(hasSausage)">
+    {{ hasSausage ? "Remove" : "Add" }} Sausage
+  </button>
+</ng-container>
+
+<h1>Price: ${{ price$ | async }}</h1>
